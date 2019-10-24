@@ -1,0 +1,2 @@
+class Datenight < ApplicationRecord
+end
