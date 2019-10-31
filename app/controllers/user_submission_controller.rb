@@ -1,0 +1,2 @@
+class UserSubmissionController < ActivityController
+end
