@@ -24,5 +24,5 @@ end
 
 private
     def activity_params
-        params.require(:activity).permit(:name, :type, :description, :link, :location)
+        params.require(:activity).permit(:name, :category, :description, :link, :location)
     end
