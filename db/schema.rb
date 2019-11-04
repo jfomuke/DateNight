@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_31_174120) do
+ActiveRecord::Schema.define(version: 2019_11_04_001436) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "activityID"
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.string "description"
     t.string "link"
     t.string "location"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_174120) do
 
   create_table "user_submissions", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.text "description"
     t.string "link"
     t.string "location"

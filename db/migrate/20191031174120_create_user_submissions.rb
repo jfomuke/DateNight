@@ -2,7 +2,7 @@ class CreateUserSubmissions < ActiveRecord::Migration[5.2]
   def change
     create_table :user_submissions do |t|
       t.string :name
-      t.string :type
+      t.string :category
       t.text :description
       t.string :link
       t.string :location

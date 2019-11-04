@@ -4,7 +4,7 @@ class ActivityController < ApplicationController
     end
     
     def show
-        @activity = Activity.find(params[:activityID])
+        @activity = Activity.find(params[:id])
     end
     
     def new
@@ -12,13 +12,17 @@ class ActivityController < ApplicationController
     end
     
     def create
-        @activity = Activity.new(article_params)
+        @activity = Activity.new(activity_params)
         
-        @activity.save
+        if @activity.save
+            redirect_to @activity
+        else
+            render 'new'
+        end
     end
 end
 
 private
     def activity_params
-        params.require(:activity).permit(:activityID, :name, :type, :description, :link, :location)
+        params.require(:activity).permit(:name, :type, :description, :link, :location)
     end
