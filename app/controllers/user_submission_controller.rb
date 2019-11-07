@@ -20,6 +20,7 @@ class UserSubmissionController < ActivityController
     def edit
         @usersubmission = UserSubmission.find(params[:id])
     end
+    
     # new
     def destroy
         @usersubmission = UserSubmission.find(params[:id])
