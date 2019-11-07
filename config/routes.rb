@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'date_night/generate'
+  get 'date_night/index'
+  
   
   resources :activity
   resources :usersubmission
