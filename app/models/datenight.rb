@@ -1,3 +1,3 @@
 class Datenight < ApplicationRecord
-    has_many :Activity
+    has_many :activity
 end
