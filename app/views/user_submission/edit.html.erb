@@ -1,0 +1,35 @@
+<h1>Editing User Submissions</h1>
+ 
+<%= form_for :usersubmission, url: edit_usersubmission_url(@usersubmission), method: :patch do |f| %>
+ 
+  <% if @usersubmission.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@usersubmission.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @usersubmission.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', edit_usersubmission_path %>
