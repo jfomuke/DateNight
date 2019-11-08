@@ -1,12 +1,10 @@
-<p>THIS WILL DISPLAY THE DATABASE</p>
-
 <table>
   <tr>
     <th>Name</th>
     <th>Type</th>
-    <th>Location</th>
     <th>Info</th>
-    <th>LInk</th>
+    <th>Location</th>
+    <th>Link</th>
   </tr>
  
   <% @activity.each do |activity| %>
@@ -14,8 +12,8 @@
       <td> <%= activity.name %> </td> 
       <td> <%= activity.category %> </td> 
       <td> <%= activity.description %> </td> 
-      <td> <%= activity.link %> </td>
       <td> <%= activity.location %> </td>
+      <td> <%= activity.link %> </td>
     </tr>
   <% end %>
 </table>
