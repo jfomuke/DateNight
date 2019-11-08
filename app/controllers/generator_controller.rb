@@ -8,7 +8,9 @@ class GeneratorController < ApplicationController
     end
     
     def create
-        @generator = Generator.new
+        @generator = Generator.new()
+        
         redirect_to @generator
     end
+    # has_and_belongs_to_many :activity - for use later in model
 end
