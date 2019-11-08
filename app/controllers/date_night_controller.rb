@@ -1,5 +1,14 @@
 class DateNightController < ApplicationController
   
+  def generate
+  end
+  
+  def create
+        render plain: params[:activity].inspect
+  end
+  
+  
+  
   def show
     @date_night = Datenight.find(params[:id])
   end
