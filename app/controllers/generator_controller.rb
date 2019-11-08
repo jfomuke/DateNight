@@ -13,7 +13,6 @@ class GeneratorController < ApplicationController
             redirect_to @generator
         end
     end
-    # has_and_belongs_to_many :activity - for use later in model
 end
 
 private
