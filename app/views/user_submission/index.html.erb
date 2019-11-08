@@ -1,0 +1,36 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Info</th>
+    <th>Location</th>
+    <th>Link</th>
+  </tr>
+ 
+  <% @user_submission.each do |activity| %>
+    <tr>
+      <td> <%= activity.name %> </td> 
+      <td> <%= activity.category %> </td> 
+      <td> <%= activity.description %> </td> 
+      <td> <%= activity.location %> </td>
+      <td> <%= activity.link %> </td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+    
+<button>Generate</button>
+    
+<br>
+<br>
+    
+<form>
+    <input type="checkbox" name="AgToS" value="ToS"> I agree to the Terms of Service<br>
+</form>
+    
+<br>
+    
+<button>View All</button>
+<button>Submit</button>
+    
