@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_001436) do
+ActiveRecord::Schema.define(version: 2019_11_08_170249) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "activityID"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2019_11_04_001436) do
 
   create_table "datenights", force: :cascade do |t|
     t.integer "PID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "generators", force: :cascade do |t|
+    t.integer "acitivityID"
+    t.integer "foodID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
