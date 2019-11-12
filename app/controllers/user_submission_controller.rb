@@ -26,7 +26,7 @@ class UserSubmissionController < ApplicationController
         @usersubmission = UserSubmission.find(params[:id])
         @usersubmission.destroy
         
-        redirect_to articles_path
+        redirect_to user_submission_path
     end
     
     def create
