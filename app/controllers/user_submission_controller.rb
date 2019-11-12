@@ -1,4 +1,4 @@
-class UserSubmissionController < ActivityController
+class UserSubmissionController < ApplicationController
     #needs update & delete
     # edit from blog - notes
     
