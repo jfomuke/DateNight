@@ -22,7 +22,7 @@ footer{
     text-align: center
 }
 
-body {
+body, a {
     text-align: center;
     background-color: #171614;
 }
@@ -42,4 +42,19 @@ h2 {
 p {
     color: #92817A;
     font-style: normal;
+}
+
+
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
 }
