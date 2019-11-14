@@ -1,3 +1,27 @@
 // Place all the styles related to the UserSubmission controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  overflow-x: auto;
+  margin: 0px auto;
+  background-color: #a28f9d;
+}
+
+th {
+    background-color: #7a6c5d;
+}
+
+th, td {
+  border: 1px solid #904e55;
+  padding: 15px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #9f9aa4;
+}
+
+tr:hover {
+    background-color: #fffdf0;
+}

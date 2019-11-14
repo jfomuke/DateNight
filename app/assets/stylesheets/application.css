@@ -22,14 +22,14 @@ footer{
     text-align: center
 }
 
-body {
+body, a {
     text-align: center;
-    background-color: #6C0E23;
+    background-color: #171614;
 }
 
 h1 {
     
-    color: #A94456;
+    color: #9A8873;
     font-style: oblique;
 
 }
@@ -40,6 +40,35 @@ h2 {
 }
 
 p {
-    color: #92817A;
+    color: #754043;
     font-style: normal;
+}
+
+span {
+    color: #754043;
+}
+
+
+
+a:link, a:visited, button{
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
+a:hover, a:active {
+  background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	background-color:#ccc2a6;
+
 }
