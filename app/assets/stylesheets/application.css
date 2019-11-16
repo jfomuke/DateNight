@@ -16,6 +16,7 @@
 
 header {
     text-align: center;
+    font-size: 32px;
 }
 
 footer{
@@ -31,17 +32,21 @@ h1 {
     
     color: #9A8873;
     font-style: oblique;
+    font-family: Georgia;
 
 }
 
 h2 {
     color: #68635D;
     font-style: italic;
+    font-size: 24px;
 }
 
 p {
     color: #754043;
     font-style: normal;
+    font-family: Open Sans; 
+    font-size: 16px;
 }
 
 span {
