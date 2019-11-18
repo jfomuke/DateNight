@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_11_08_170249) do
 
   create_table "activities", force: :cascade do |t|
-    t.integer "activityID"
     t.string "name"
     t.string "category"
     t.string "description"
