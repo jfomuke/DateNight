@@ -16,6 +16,7 @@
 
 header {
     text-align: center;
+    font-size: 32px;
 }
 
 footer{
@@ -31,17 +32,21 @@ h1 {
     
     color: #9A8873;
     font-style: oblique;
+    font-family: Georgia;
 
 }
 
 h2 {
     color: #68635D;
     font-style: italic;
+    font-size: 24px;
 }
 
 p {
     color: #754043;
     font-style: normal;
+    font-family: Open Sans; 
+    font-size: 16px;
 }
 
 span {
@@ -50,7 +55,7 @@ span {
 
 
 
-a:link, a:visited, button{
+a:link, a:visited, button, input[type=submit] {
   box-shadow: 0px 1px 0px 0px #1c1b18;
 	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
 	background-color:#eae0c2;
@@ -71,4 +76,31 @@ a:hover, a:active {
   background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
 	background-color:#ccc2a6;
 
+}
+
+input[type=text], select, textarea {
+  width: 15%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }

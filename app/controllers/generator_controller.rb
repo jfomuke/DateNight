@@ -8,14 +8,14 @@ class GeneratorController < ApplicationController
     end
     
     def create
-        @generator = Generator.new(generator_params)
+        activityArray = Activity.where(category: 'activity').ids
+        aID = activityArray[rand(activityArray.length)]
+        foodArray = Activity.where(category: 'food').ids
+        fID = foodArray[rand(foodArray.length)]
+        @generator = Generator.new(acitivityID: aID, foodID: fID)
+        
         if @generator.save
             redirect_to @generator
         end
     end
 end
-
-private
-    def generator_params
-        params.require(:generator).permit(:activityID, :foodID)
-    end
