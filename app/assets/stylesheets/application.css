@@ -79,11 +79,11 @@ a:hover, a:active {
 }
 
 input[type=text], select, textarea {
+  alignment-baseline: central;
   width: 15%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-
 }
 
 label {
