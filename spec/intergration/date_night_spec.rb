@@ -1,15 +1,16 @@
 require 'rails_helper.rb'
 require 'generator_controller'
 
-feature"DateNight adds Contents" do
+feature"DateNight adds New Activity Submission" do
     scenario "DateNigh successfully navigates to the User Submission page" do
         visit user_submission_index_path
         expect(page).to have_content("Name")
         expect(page).to have_content("Type")
         expect(page).to have_content("Info")
         expect(page).to have_content("Location")
-      #  expect(page).to have_field("Name")
-      #  expect(page).to have_field("Description")
+        expect(page).to have_content("Link")
+        expect(page).to have_content("Update")
+        expect(page).to have_content("Delete")
     end
 end
 
@@ -25,3 +26,14 @@ feature"DateNight create functionality works" do
 end
 
 #expect { binary_multiple_of_4?("yes") }.not_to raise_error()#::NoMethodError)
+
+feature"DateNight Activity Page" do
+    scenario "DateNigh successfully navigates to the Activity Page" do
+        visit activity_index_path
+        expect(page).to have_content("Name")
+        expect(page).to have_content("Type")
+        expect(page).to have_content("Info")
+        expect(page).to have_content("Location")
+        expect(page).to have_content("Link")
+    end
+end
