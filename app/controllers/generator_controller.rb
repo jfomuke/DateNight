@@ -5,6 +5,7 @@ class GeneratorController < ApplicationController
     
     def show
         @generator = Generator.find(params[:id])
+        @activity = Activity.find(@generator.acitivityID || @generator.foodID)
     end
     
     def create
