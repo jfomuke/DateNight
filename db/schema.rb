@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_170249) do
+ActiveRecord::Schema.define(version: 2019_12_01_145925) do
 
   create_table "activities", force: :cascade do |t|
+    t.integer "activityID"
     t.string "name"
     t.string "category"
     t.string "description"
@@ -20,6 +21,13 @@ ActiveRecord::Schema.define(version: 2019_11_08_170249) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "activities_generators", id: false, force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "generator_id"
+    t.index ["activity_id"], name: "index_activities_generators_on_activity_id"
+    t.index ["generator_id"], name: "index_activities_generators_on_generator_id"
   end
 
   create_table "datenights", force: :cascade do |t|

@@ -13,11 +13,14 @@ class GeneratorController < ApplicationController
         randActivity = activityArray[rand(activityArray.length)]
         randActivityParams = [:name => randActivity.name, :category => randActivity.category, :description => randActivity.description, :link => randActivity.link, :location => randActivity.location]
         aID = randActivity.id
+        
         foodArray = Activity.where(category: 'food')
         randFood = foodArray[rand(foodArray.length)]
         fID = randFood.id
-        @generator = Generator.new(acitivityID: aID, foodID: fID)
+        
+        @generator = Generator.new(activityID: aID, foodID: fID)
         @generator.save
+        
         @activity = @generator.activity.create(randActivityParams)
         @activity = @generator.activity.create(randFood.name, randFood.category, randFood.description, randFood.link, randFood.location)
         
