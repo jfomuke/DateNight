@@ -16,13 +16,14 @@ class GeneratorController < ApplicationController
         
         foodArray = Activity.where(category: 'food')
         randFood = foodArray[rand(foodArray.length)]
+        randFoodParams = [:name => randFood.name, :category => randFood.category, :description => randFood.description, :link => randFood.link, :location => randFood.location]
         fID = randFood.id
         
-        @generator = Generator.new(activityID: aID, foodID: fID)
+        @generator = Generator.new(acitivityID: aID, foodID: fID)
         @generator.save
         
         @activity = @generator.activity.create(randActivityParams)
-        @activity = @generator.activity.create(randFood.name, randFood.category, randFood.description, randFood.link, randFood.location)
+        @activity = @generator.activity.create(randFoodParams)
         
         if @generator.save
             redirect_to @generator
