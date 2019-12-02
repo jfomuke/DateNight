@@ -1,5 +1,7 @@
 require 'rails_helper.rb'
 require 'generator_controller'
+require 'activity_controller'
+
 
 feature"DateNight adds New Activity Submission" do
     scenario "DateNigh successfully navigates to the User Submission page" do
@@ -14,7 +16,7 @@ feature"DateNight adds New Activity Submission" do
     end
 end
 
-#kev second test for generator controller, testing this ciz seems like important part --- can add more later
+#test for generator controller
 feature"DateNight create functionality works" do
     scenario "our generator controller can add to food and activity array" do
         #expect array assignments to not blow up
@@ -35,5 +37,26 @@ feature"DateNight Activity Page" do
         expect(page).to have_content("Info")
         expect(page).to have_content("Location")
         expect(page).to have_content("Link")
+    end
+end
+
+feature"App includes copyright" do
+    scenario "activity, generate, and usersubmission page has copyright" do
+        visit activity_index_path
+        visit user_submission_index_path
+        #visit generator_path
+        expect(page).to have_content("Copyright 2019") 
+        expect(page).to have_content("DateNight")
+        expect(page).to have_content("All Rights Reserved")
+    end
+end
+
+feature"App covers safe dating practices and includes terms of service" do
+    scenario "activity, generate, and usersubmission page have terms of service and link to safe dating" do
+        visit activity_index_path
+        visit user_submission_index_path
+        #visit generator_path
+        expect(page).to have_content("Safe Dating Practices") 
+        expect(page).to have_content("Terms of Service")
     end
 end
