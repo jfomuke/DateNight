@@ -1,3 +1,4 @@
 class Generator < ApplicationRecord
-    has_and_belongs_to_many :activity
+    has_many :dateactivities
+    has_many :datefoods
 end
