@@ -5,7 +5,6 @@ class GeneratorController < ApplicationController
     
     def show
         @generator = Generator.find(params[:id])
-        @activity = Activity.find(@generator.acitivityID || @generator.foodID)
     end
     
     def create
@@ -22,8 +21,8 @@ class GeneratorController < ApplicationController
         @generator = Generator.new(acitivityID: aID, foodID: fID)
         @generator.save
         
-        @activity = @generator.activity.create(randActivityParams)
-        @activity = @generator.activity.create(randFoodParams)
+        @dateactivity = @generator.activity.create(randActivityParams)
+        @datefood = @generator.activity.create(randFoodParams)
         
         if @generator.save
             redirect_to @generator
