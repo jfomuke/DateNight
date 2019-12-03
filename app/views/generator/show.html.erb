@@ -1,21 +1,20 @@
-<h1>Generated Date</h1>
+
+<h2>Here is your suggested Date: </h2>
 
 <br>
-<br>
-
-<h2>Here is the suggested Date: </h2>
-
-<br>
-<p>
+<!---<p>
 aID: <%= @generator.acitivityID %>
 fID: <%= @generator.foodID %>
-</p>
+</p> -->
 <br>
 
-<p> Activity: </p>
+<p style = "color:#18CAE6; font-size:32px;"> <u>Activity:</u>
 <%= render @generator.dateactivities %>
-<p> Food: </p>
+</p>
+<br>
+<p style = "color:#18CAE6; font-size:32px;"> <strong><u>Food:</u></strong>
 <%= render @generator.datefoods %>
+</p>
 
 <br>
 <br>
