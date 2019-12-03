@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_170249) do
+ActiveRecord::Schema.define(version: 2019_12_03_005954) do
 
   create_table "activities", force: :cascade do |t|
+    t.integer "activityID"
     t.string "name"
     t.string "category"
     t.string "description"
@@ -20,6 +21,30 @@ ActiveRecord::Schema.define(version: 2019_11_08_170249) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dateactivities", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.text "description"
+    t.string "link"
+    t.string "location"
+    t.integer "generator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["generator_id"], name: "index_dateactivities_on_generator_id"
+  end
+
+  create_table "datefoods", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.text "description"
+    t.string "link"
+    t.string "location"
+    t.integer "generator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["generator_id"], name: "index_datefoods_on_generator_id"
   end
 
   create_table "datenights", force: :cascade do |t|
