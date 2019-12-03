@@ -21,8 +21,8 @@ class GeneratorController < ApplicationController
         @generator = Generator.new(acitivityID: aID, foodID: fID)
         @generator.save
         
-        @dateactivity = @generator.activity.create(randActivityParams)
-        @datefood = @generator.activity.create(randFoodParams)
+        @dateactivities = @generator.dateactivities.create(randActivityParams)
+        @datefoods = @generator.datefoods.create(randFoodParams)
         
         if @generator.save
             redirect_to @generator
