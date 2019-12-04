@@ -1,11 +1,7 @@
 class UserSubmissionController < ApplicationController
-    #needs update & delete
-    # edit from blog - notes
-    
-    
-     def index
+    def index
         @usersubmission = UserSubmission.all
-     end
+    end
     
     def show
         @usersubmission = UserSubmission.find(params[:id])
@@ -15,8 +11,6 @@ class UserSubmissionController < ApplicationController
         @usersubmission = UserSubmission.new
     end
     
-    # new (11/7/2019)
-    # usersubmission#edit
     def edit
         @usersubmission = UserSubmission.find(params[:id])
     end
@@ -30,7 +24,6 @@ class UserSubmissionController < ApplicationController
         end
     end
     
-    # new
     def destroy
         @usersubmission = UserSubmission.find(params[:id])
         @usersubmission.destroy
@@ -47,7 +40,7 @@ class UserSubmissionController < ApplicationController
             render 'new'
         end
     end
-end # end class
+end
 
 
 private

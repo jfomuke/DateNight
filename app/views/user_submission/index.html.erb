@@ -5,8 +5,9 @@
     <th>Info</th>
     <th>Location</th>
     <th>Link</th>
-    <th>Update</th>
+    <th>Edit</th>
     <th>Delete</th>
+    <th>Accept</th>
   </tr>
  
   <% @usersubmission.each do |u| %>
@@ -21,7 +22,7 @@
                                 user_submission_path(u),
                                 method: :delete,
                                 data: { confirm: 'Are you sure?' } %></td>
-      <td> <%= link_to 'Add To Activites', edit_activity_path(u) %></td>
+      <td> <%= link_to 'Accept Submission', edit_activity_path(u) %></td>
       
       
     </tr>
