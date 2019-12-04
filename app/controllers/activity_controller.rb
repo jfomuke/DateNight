@@ -20,6 +20,19 @@ class ActivityController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit
+        usub = UserSubmission.find(params[:id])
+        @activity = Activity.new(:name => usub.name, :category => usub.category, :description => usub.description, :link => usub.link, :location => usub.location)
+        
+        if @activity.save
+            @usersubmission = UserSubmission.find(params[:id])
+            @usersubmission.destroy
+            render 'saved'
+        else
+            render 'new'
+        end 
+    end
 end
 
 private

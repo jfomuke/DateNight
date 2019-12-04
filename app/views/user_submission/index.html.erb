@@ -9,18 +9,19 @@
     <th>Delete</th>
   </tr>
  
-  <% @usersubmission.each do |user_submission| %>
+  <% @usersubmission.each do |u| %>
     <tr>
-      <td> <%= user_submission.name %> </td> 
-      <td> <%= user_submission.category %> </td> 
-      <td> <%= user_submission.description %> </td> 
-      <td> <%= user_submission.location %> </td>
-      <td> <%= user_submission.link %> </td>
-      <td> <%= link_to 'Edit', edit_user_submission_path(user_submission) %></td>
+      <td> <%= u.name %> </td> 
+      <td> <%= u.category %> </td> 
+      <td> <%= u.description %> </td> 
+      <td> <%= u.location %> </td>
+      <td> <%= u.link %> </td>
+      <td> <%= link_to 'Edit', edit_user_submission_path(u) %></td>
       <td> <%= link_to 'Destroy',
-                                user_submission_path(user_submission),
+                                user_submission_path(u),
                                 method: :delete,
                                 data: { confirm: 'Are you sure?' } %></td>
+      <td> <%= link_to 'Add To Activites', edit_activity_path(u) %></td>
       
       
     </tr>
