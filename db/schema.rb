@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2019_12_03_005954) do
 
   create_table "activities", force: :cascade do |t|
-    t.integer "activityID"
     t.string "name"
     t.string "category"
     t.string "description"
@@ -54,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_005954) do
   end
 
   create_table "generators", force: :cascade do |t|
-    t.integer "acitivityID"
+    t.integer "activityID"
     t.integer "foodID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
