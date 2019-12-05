@@ -10,13 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_tree
  *= require_self
  */
 
 header {
+    font-family: "Agency-FB";
     text-align: center;
-    font-size: 32px;
+    font-variant: bold;
+  
 }
 
 footer{
@@ -30,28 +32,27 @@ body, a {
 
 h1 {
     
-    color: #9A8873;
-    font-style: oblique;
-    font-family: Georgia;
-
+    font-size: 200px; 
+    color:#ff0066;
 }
 
 h2 {
-    color: #68635D;
+    color: #ff0066;
     font-style: italic;
-    font-size: 24px;
+    font-size: 50px;
 }
 
 h3{
-  color: #754043;
+  color: #ff0066;
+  font-size: 35px;
 }
 
 p {
-    color: #754043;
-    font-style: normal;
-    font-family: Open Sans; 
-    font-size: 16px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #18CAE6; 
 }
+
 
 span {
     color: #754043;
@@ -107,4 +108,44 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+
+
+
+
+table {
+
+  border: 3px;
+  overflow-x: auto;
+  margin: 0px auto;
+  background-color: #BBBBBB;
+  border-color: #ff0066;
+}
+
+th {
+  background-color: #ff0066;
+  font-size:20px;
+}
+
+td{
+  max-width:300px;
+}
+
+th, td {
+  border: 1px;
+  border-color: #ff0066;
+  padding: 15px;
+  text-align: left;
+  
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+    
+}
+
+tr:hover {
+    background-color: #ff0066;
+    color: white;
 }
