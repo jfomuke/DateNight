@@ -18,8 +18,7 @@ header {
     font-family: "Agency-FB";
     text-align: center;
     font-variant: bold;
-    font-size: 75px; 
-    color:#ff0066;
+  
 }
 
 footer{
@@ -33,20 +32,19 @@ body, a {
 
 h1 {
     
-    color: #9A8873;
-    font-style: oblique;
-    font-family: Georgia;
-
+    font-size: 200px; 
+    color:#ff0066;
 }
 
 h2 {
-    color: #68635D;
+    color: #ff0066;
     font-style: italic;
-    font-size: 24px;
+    font-size: 50px;
 }
 
 h3{
-  color: #754043;
+  color: #ff0066;
+  font-size: 35px;
 }
 
 p {
@@ -117,29 +115,37 @@ input[type=submit]:hover {
 
 
 table {
-  border-collapse: collapse;
-  border: 1px solid beige;
+
+  border: 3px;
   overflow-x: auto;
   margin: 0px auto;
-  background-color: #9D72FF;
+  background-color: #BBBBBB;
+  border-color: #ff0066;
 }
 
 th {
-  background-color: #FFB3FD;
+  background-color: #ff0066;
+  font-size:20px;
 }
 
+td{
+  max-width:300px;
+}
 
 th, td {
-  border: 1px solid black;
+  border: 1px;
+  border-color: #ff0066;
   padding: 15px;
   text-align: left;
+  
 }
 
 tr:nth-child(even) {
-    background-color: #01FFFF;
+    background-color: #EEEEEE;
     
 }
 
 tr:hover {
-    background-color: #13CA91;
+    background-color: #ff0066;
+    color: white;
 }
