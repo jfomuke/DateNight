@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   get 'date_night/index'
   
   resources :generator do
-    resources :activity
+    resources :dateactivity
+    resources :datefoods
   end
   
   resources :activity
