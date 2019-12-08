@@ -20,10 +20,11 @@ class UserSubmissionController < ApplicationController
     
     def update
         @usersubmission = UserSubmission.find(params[:id])
-        if @usersubmission.update(uSub_params)
-            redirect_to @usersubmission
-        else
+        @usersubmission.update(uSub_params)
+        if !(@usersubmission.update(uSub_params))
             render 'edit'
+        else
+            redirect_to user_submission_index_path
         end
     end
     
@@ -48,5 +49,5 @@ end
 
 private
     def uSub_params
-        params.require(:usersubmission).permit(:name, :category, :description, :link, :location)
+        params.require(:user_submission).permit(:name, :category, :description, :link, :location)
     end
