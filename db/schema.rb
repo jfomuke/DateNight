@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_005954) do
+ActiveRecord::Schema.define(version: 2019_12_11_032706) do
 
   create_table "activities", force: :cascade do |t|
+    t.integer "activityID"
     t.string "name"
     t.string "category"
     t.string "description"
@@ -53,7 +54,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_005954) do
   end
 
   create_table "generators", force: :cascade do |t|
-    t.integer "activityID"
+    t.integer "acitivityID"
     t.integer "foodID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -62,13 +63,11 @@ ActiveRecord::Schema.define(version: 2019_12_03_005954) do
   create_table "user_submissions", force: :cascade do |t|
     t.string "name"
     t.string "category"
-    t.text "description"
+    t.string "description"
     t.string "link"
     t.string "location"
-    t.integer "Activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Activity_id"], name: "index_user_submissions_on_Activity_id"
   end
 
 end
